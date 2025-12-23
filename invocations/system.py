@@ -25,6 +25,27 @@ def copy_vscode_settings(
     )
 
 
+@invoke.task
+def copy_env_file(
+    context: invoke.Context,
+    force_update: bool = False,
+) -> None:
+    """Copy .env file from template.
+
+    Args:
+    ----
+        context: invoke's context
+        force_update: rewrite file if exists or not
+
+    """
+    _rewrite_file(
+        context=context,
+        from_path=".env.template",
+        to_path=".env",
+        force_update=force_update,
+    )
+
+
 def _rewrite_file(
     context: invoke.Context,
     from_path: str,

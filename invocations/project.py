@@ -20,6 +20,9 @@ def init(context: invoke.Context, update_deps: bool = False) -> None:
     printing.print_success("Setting up vscode settings")
     system.copy_vscode_settings(context)
 
+    printing.print_success("Copying .env file")
+    system.copy_env_file(context)
+
     printing.print_success("Setting up git")
     git_setup(context)
 
