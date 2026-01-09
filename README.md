@@ -2,6 +2,10 @@
 
 This repository contains `Selenium` tests for `PhuongPV` project.
 
+`test_create_post` running example:
+
+![Test Create Post](./test_run_examples/create_post.gif)
+
 If you are new to autotests - checkout [pomcorn](https://github.com/saritasa-nest/pomcorn), its docs and tutorial.
 
 ## Installing project for developing on local PC
@@ -17,7 +21,7 @@ If you already configured uv, poetry, and webdrivers, you may use
 following commands to start local development:
 
 ```bash
-uv venv --python 3.13 --prompt usummit-phuongpv --seed
+uv venv --python 3.13 --prompt phuongpv-autotests --seed
 source .venv/bin/activate
 poetry install --only local
 inv project.init

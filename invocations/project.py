@@ -15,7 +15,7 @@ def init(context: invoke.Context, update_deps: bool = False) -> None:
         printing.print_success("Update and install dependencies")
         context.run("poetry update")
     else:
-        context.run("poetry install --sync")
+        context.run("poetry sync")
 
     printing.print_success("Setting up vscode settings")
     system.copy_vscode_settings(context)
